@@ -1,3 +1,3 @@
 # hello-world
 just a repository
-Hello and good afternoon.Welcome to land of dreams and here is a great news.oops!
+This is an employmanagement system whose frontend is given and this is done using simple ui-routing.
