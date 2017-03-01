@@ -1,0 +1,38 @@
+<div class="container1">
+    <p>EmployeeLog</p>
+    <form ng-submit="def(us)">
+        <input type="text" placeholder="Enter ur employeeid" ng-model="us.emp_id">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter the date" ng-model="us.date">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter the status" ng-model="us.status">
+        <br>
+        <br>
+        <button class="button button5" type="submit">Submit</button>
+        <br>
+        <br>
+    </form>
+    <input type="text" placeholder="Enter the id here" ng-model="id">
+    <br>
+    <br>
+    <button class="button button5" ng-click="delet()">DELETE</button>
+    <br>
+    <br>
+    <button type="submit" ng-click="gett()">GET EmployeeLog Details</button>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Employee Id</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        <tr ng-repeat="d in details">
+            <td>{{d.id}}</td>
+            <td>{{d.emp_id}}</td>
+            <td>{{d.date}}</td>
+            <td>{{d.status}}</td>
+        </tr></table><br><br>
+        <a href="#/home"> Back</a>
+</div>

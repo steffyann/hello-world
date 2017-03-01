@@ -1,0 +1,56 @@
+<div class="container3">
+    <p>Leave Applications</p>
+    <form ng-submit="abc(use)">
+        <input type="text" placeholder="Enter ur employeeid" ng-model="use.emp_id">
+        <br>
+        <br>
+        <input type="text" placeholder="leave_applied on" ng-model="use.leave_appliedon">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur date for which leave is applied" ng-model="use.leave_applied_for_date">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur date of return" ng-model="use.date_of_return">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur reason for which leave is applied" ng-model="use.reason_for_leave">
+        <br>
+        <br>
+        <input type="text" placeholder="Approved?y/n" ng-model="use.is_approved">
+        <br>
+        <br>
+        <button class="button button5" type="submit">Submit</button>
+        <br>
+        <br>
+        <!-- <a href="#/home"> Back</a> -->
+    </form>
+    <input type="text" placeholder="Enter the id here" ng-model="id">
+    <br>
+    <br>
+    <button class="button button5" ng-click="del()">DELETE</button>
+    <br>
+    <br>
+    <button type="submit" ng-click="ge()">GET Leave Application details</button>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Employee id</th>
+            <th>Leave applied on</th>
+            <th>Leave applied for date</th>
+            <th>Date of Return</th>
+            <th>Reason for leave</th>
+            <th>Is Approved By</th>
+        </tr>
+        <tr ng-repeat="d in details">
+            <td>{{d.id}}</td>
+            <td>{{d.emp_id}}</td>
+            <td>{{d.leave_appliedon}}</td>
+            <td>{{d.leave_applied_for_date}}</td>
+            <td>{{d.date_of_return}}</td>
+            <td>{{d.reason_for_leave}}</td>
+            <td>{{d.is_approved}}</td>
+        </tr>
+    </table>
+    <a href="#/home"> Back</a>
+</div>
+</body>

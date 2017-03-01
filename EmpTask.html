@@ -1,0 +1,54 @@
+<div class="container2">
+    <p>Employee Task</p>
+    <form ng-submit="xyz(u)">
+        <input type="text" placeholder="Enter ur name" ng-model="u.name">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur designation" ng-model="u.designation">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur employeeid" ng-model="u.emp_id">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter the date in which task is started" ng-model="u.from_date">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter the deadline for completing the task" ng-model="u.due_date">
+        <br>
+        <br>
+        <input type="text" placeholder="Assigned by?" ng-model="u.assigned_by">
+        <br>
+        <br>
+        <button class="button button5" type="submit">Submit</button>
+        <br>
+        <br>
+    </form>
+    <input type="text" placeholder="Enter the id here" ng-model="id">
+    <br>
+    <br>
+    <button class="button button5" ng-click="dele()">DELETE</button>
+    <br>
+    <br>
+    <button type="submit" ng-click="getti()">GET Employee Task Details</button>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Employee Id</th>
+            <th>From date</th>
+            <th>Due date </th>
+            <th>Assigned by</th>
+        </tr>
+        <tr ng-repeat="d in details">
+            <td>{{d.id}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.designation}}</td>
+            <td>{{d.emp_id}}</td>
+            <td>{{d.from_date}}</td>
+            <td>{{d.due_date}}</td>
+            <td>{{d.assigned_by}}</td>
+        </tr>
+    </table>
+    <a href="#/home">Back</a>
+</div>

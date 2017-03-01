@@ -1,0 +1,42 @@
+<div class="container4">
+    <p>Employees</p>
+    <form ng-submit="post(user)">
+        <input type="text" placeholder="Enter ur name" ng-model="user.name">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur designation" ng-model="user.designation">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur date of birth" ng-model="user.dob">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter ur joining date" ng-model="user.joindate">
+        <br>
+        <br>
+        <button class="button button5" type="submit">Submit</button>
+        <br>
+        <br>
+    </form>
+    <input type="text" placeholder="Enter the id here" ng-model="id">
+    <br>
+    <br>
+    <button class="button button5" ng-click="delete()">DELETE</button>
+    <br>
+    <br>
+     <button type="submit" ng-click="get()">GET Employee details</button>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Join Date</th>
+            </tr>
+            <tr ng-repeat="d in details">
+                <td>{{d.id}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.dob}}</td>
+                <td>{{d.joindate}}</td>
+            </tr>
+        </table><br>
+    <a href="#/home"> Back</a>
+</div>
